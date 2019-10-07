@@ -1,3 +1,4 @@
+// TypeScript version of require
 import express from 'express';
 
 const port: Number = 8080;
