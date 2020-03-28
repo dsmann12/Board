@@ -1,21 +1,32 @@
 // Game Model
 // Represents a game in the database
+import Company from './company';
+import Platform from './platform';
 
 class Game {
-    id: Number;
-    name: String;
-    summary: String;
-    cover: String;
+    id: number;
+    title: string;
+    summary: string;
+    cover: string;
     release: Date;
-    // developer should be foreign key
-    // publisher should be foreign key
+    genre: string;
+    developer: Company;
+    publisher: Company;
+    platforms: Platform[];
 
-    constructor(id: Number = 0, name = "", summary = "", cover = "", release = new Date()) {
+    constructor(id: number, title: string, summary: string, cover: string,
+                release: Date = new Date(), genre: string, developer: Company,
+                publisher: Company, platforms: Platform[]) {
         this.id = id;
-        this.name = name;
+        this.title = title;
         this.summary = summary;
         this.cover = cover;
         this.release = release;
+        this.genre = genre;
+
+        this.developer = developer;
+        this.publisher = publisher;
+        this.platforms = platforms;
     }
 }
 
