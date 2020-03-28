@@ -1,0 +1,5 @@
+src/config/*
+# .gitignore
+node_modules/
+.vscode
+dist
